@@ -13,6 +13,9 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
+			
+			System.out.println("Tudo culpa de giulia");
+			//Giulia va a merda
 			Parent root = FXMLLoader.load(getClass().getResource("/fxmls/FirstScene.fxml"));
 			Scene start = new Scene(root,800,600);
 			primaryStage.setScene(start);
