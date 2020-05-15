@@ -8,27 +8,27 @@ import javafx.scene.control.TitledPane;
 
 public class ControllerLogedScreen {
 
-    @FXML
-    private Label docUsername;
+	@FXML
+	private Label docUsername;
 
-    @FXML
-    private Label docName;
+	@FXML
+	private Label docName;
 
-    @FXML
-    private Label docSpeciality;
+	@FXML
+	private Label docSpeciality;
 
-    @FXML
-    private Label docWorkplace;
+	@FXML
+	private Label docWorkplace;
 
-    @FXML
-    private TitledPane appointmentTable;
+	@FXML
+	private TitledPane appointmentTable;
 
-    @FXML
-    private Button botaoLogOut;
+	@FXML
+	private Button botaoLogOut;
 
-    @FXML
-    void goToLogOout(ActionEvent event) {
+	@FXML
+	void goToLogOout(ActionEvent event) {
 
-    }
+	}
 
 }

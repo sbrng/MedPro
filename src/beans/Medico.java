@@ -3,7 +3,7 @@ package beans;
 import java.time.LocalDate;
 import java.util.List;
 
-public class Medico extends Usuario{
+public class Medico extends Usuario {
 	private String cmr;
 	private EspecialidadeEnum especialidade;
 	private LocalTrabEnum localTrab;
@@ -33,7 +33,7 @@ public class Medico extends Usuario{
 	public void setEspecialidade(EspecialidadeEnum especialidade) {
 		this.especialidade = especialidade;
 	}
-	
+
 	public LocalTrabEnum getLocalTrab() {
 		return localTrab;
 	}
@@ -57,15 +57,15 @@ public class Medico extends Usuario{
 	public void setConsultas(List<Consulta> consultas) {
 		this.consultas = consultas;
 	}
-	
+
 	public void addPaciente(Paciente paciente) {
-		if(!this.getPacientes().contains(paciente)) {
+		if (!this.getPacientes().contains(paciente)) {
 			this.getPacientes().add(paciente);
 		}
 	}
-	
+
 	public void addConsultaEPaciente(Consulta con) {
-		if(!this.getConsultas().contains(con)) {
+		if (!this.getConsultas().contains(con)) {
 			this.getConsultas().add(con);
 			this.addPaciente(con.getPaciente());
 		}

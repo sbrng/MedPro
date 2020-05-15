@@ -1,10 +1,10 @@
 package sistema.beans;
 
-public class Medico extends Usuario{
+public class Medico extends Usuario {
 	private String cmr;
 	private String especialidade;
 	private String localTrab;
-	
+
 	public Medico(String cmr, String especialidade, String localTrab) {
 		this.cmr = cmr;
 		this.especialidade = especialidade;
@@ -38,6 +38,5 @@ public class Medico extends Usuario{
 	public void setLocalTrab(String localTrab) {
 		this.localTrab = localTrab;
 	}
-	
-	
+
 }

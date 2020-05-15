@@ -10,7 +10,7 @@ public class Consulta {
 	private String local;
 	private List<String> sintomas;
 	private String anotacoes;
-	
+
 	public Consulta(Medico medico, Paciente paciente, LocalDateTime dataHora, String local) {
 		this.medico = medico;
 		this.paciente = paciente;
@@ -79,14 +79,13 @@ public class Consulta {
 	public void setAnotacoes(String anotacoes) {
 		this.anotacoes = anotacoes;
 	}
-	
-	public void addConsultaAoPaciente(){
+
+	public void addConsultaAoPaciente() {
 		this.getPaciente().addConsulta(this);
 	}
-	
+
 	public void addConsultaAoMedico() {
 		this.getMedico().addConsultaEPaciente(this);
 	}
-	
-	
+
 }
