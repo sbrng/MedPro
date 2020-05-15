@@ -1,18 +1,21 @@
 package sistema.beans;
 
+import java.time.LocalDate;
+import java.util.Calendar;
+import java.util.List;
+
 public class Medico extends Usuario {
 	private String cmr;
-	private String especialidade;
-	private String localTrab;
+	private EspecialidadeEnum especialidade;
+	private LocalTrabEnum localTrab;
+	
 
-	public Medico(String cmr, String especialidade, String localTrab) {
-		this.cmr = cmr;
-		this.especialidade = especialidade;
-		this.localTrab = localTrab;
-	}
+	
 
-	public Medico() {
+	public Medico(String nome, String login, String senha, Calendar dataNascimento, char sexo, String email) {
+		super(nome, login, senha, dataNascimento, sexo, email);
 		// TODO Auto-generated constructor stub
+		
 	}
 
 	public String getCmr() {
@@ -23,19 +26,19 @@ public class Medico extends Usuario {
 		this.cmr = cmr;
 	}
 
-	public String getEspecialidade() {
+	public EspecialidadeEnum getEspecialidade() {
 		return especialidade;
 	}
 
-	public void setEspecialidade(String especialidade) {
+	public void setEspecialidade(EspecialidadeEnum especialidade) {
 		this.especialidade = especialidade;
 	}
 
-	public String getLocalTrab() {
+	public LocalTrabEnum getLocalTrab() {
 		return localTrab;
 	}
 
-	public void setLocalTrab(String localTrab) {
+	public void setLocalTrab(LocalTrabEnum localTrab) {
 		this.localTrab = localTrab;
 	}
 

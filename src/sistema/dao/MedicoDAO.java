@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-import connections.ConnectionFactory;
 import sistema.beans.Medico;
 
 public class MedicoDAO {

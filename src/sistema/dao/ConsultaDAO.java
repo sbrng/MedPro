@@ -8,13 +8,13 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-import connections.ConnectionFactory;
 import sistema.beans.Consulta;
 import sistema.beans.Medico;
+import sistema.connections.ConnectionFactory;
 
 public class ConsultaDAO {
 	public boolean create(Consulta u) {
-
+		//sa, nao entendi oq foi feito aq, portanto n consegui ajeitar.
 		Connection con = ConnectionFactory.getConnection();
 		PreparedStatement stmt = null;
 

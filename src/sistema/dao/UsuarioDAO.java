@@ -6,7 +6,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
-import connections.ConnectionFactory;
 import sistema.beans.Usuario;
 import java.sql.Connection;
 

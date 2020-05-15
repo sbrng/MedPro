@@ -1,4 +1,4 @@
-package controllers;
+package sistema.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -7,12 +7,12 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class ControllerLogInScene {
+public class ControllerLogOnScene {
 
 	@FXML
 	private TextField usernameInput;
@@ -27,7 +27,13 @@ public class ControllerLogInScene {
 	private Button goBack;
 
 	@FXML
-	private CheckBox checkBox;
+	private PasswordField confirmPasswordInput;
+
+	@FXML
+	private ChoiceBox<?> specialityEnum;
+
+	@FXML
+	private ChoiceBox<?> workplaceEnum;
 
 	@FXML
 	void goToLastScene(ActionEvent event) {
