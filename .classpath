@@ -14,4 +14,8 @@
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="output" path="bin"/>
+<<<<<<< HEAD
 </classpath>
+=======
+</classpath>
+>>>>>>> branch 'master' of https://github.com/sbrng/MedPro.git
