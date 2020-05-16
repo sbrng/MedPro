@@ -1,5 +1,6 @@
 package sistema.controllers;
 
+import sistema.beans.Usuario;
 import sistema.repo.RepoUsuarios;
 
 public class ControllerRepoUsuarios {

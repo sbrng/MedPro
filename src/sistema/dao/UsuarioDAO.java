@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import sistema.beans.Usuario;
+import sistema.connections.ConnectionFactory;
+
 import java.sql.Connection;
 
 public class UsuarioDAO {

@@ -1,9 +1,10 @@
 package sistema.beans;
 
 import java.time.LocalDateTime;
+import java.util.Calendar;
 import java.util.List;
 
-public class Consulta {
+	public class Consulta {
 	private Medico medico;
 	private Paciente paciente;
 	private LocalDateTime dataHora;
@@ -52,7 +53,22 @@ public class Consulta {
 	public LocalDateTime getDataHora() {
 		return dataHora;
 	}
+	
+	public String getPacienteId() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
+	public String getMedicoId() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public int getId() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
 	public void setDataHora(LocalDateTime dataHora) {
 		this.dataHora = dataHora;
 	}
@@ -80,6 +96,35 @@ public class Consulta {
 	public void setAnotacoes(String anotacoes) {
 		this.anotacoes = anotacoes;
 	}
+
+	public void setMedicoId(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setId(int int1) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setDataHora(Calendar calendar) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setSintomas(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setPacienteId(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	
 
 	
 

@@ -18,6 +18,10 @@ public class Medico extends Usuario {
 		
 	}
 
+	public Medico() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public String getCmr() {
 		return cmr;
 	}
@@ -40,6 +44,16 @@ public class Medico extends Usuario {
 
 	public void setLocalTrab(LocalTrabEnum localTrab) {
 		this.localTrab = localTrab;
+	}
+
+	public void setEspecialidade(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setLocalTrab(String string) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

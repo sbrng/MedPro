@@ -9,6 +9,7 @@ import java.util.Calendar;
 import java.util.List;
 
 import sistema.beans.Medico;
+import sistema.connections.ConnectionFactory;
 
 public class MedicoDAO {
 	public Boolean create(Medico u) {

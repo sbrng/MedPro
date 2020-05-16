@@ -2,6 +2,7 @@ package sistema.repo;
 
 import java.util.List;
 
+import sistema.beans.Usuario;
 import sistema.beans.UsuarioDAO;
 
 public class RepoUsuarios {
