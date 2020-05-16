@@ -110,7 +110,7 @@ public class UsuarioDAO {
 		PreparedStatement stmt = null;
 
 		try {
-			stmt = con.prepareStatement("DELETE FROM Usuario WHERE login = ?");
+			stmt = con.prepareStatement("DELETE FROM Usuario WHERE Login = ?");
 			stmt.setString(1, u.getLogin());
 
 			stmt.executeUpdate();

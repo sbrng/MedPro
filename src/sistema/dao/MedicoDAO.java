@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
+import sistema.beans.EspecialidadeEnum;
 import sistema.beans.Medico;
 import sistema.connections.ConnectionFactory;
 
@@ -17,20 +18,18 @@ public class MedicoDAO {
 		Connection con = ConnectionFactory.getConnection();
 		PreparedStatement stmt = null;
 		try {
-			String dataNasc = u.getDataNascimento().get(Calendar.DAY_OF_MONTH) + "/"
-					+ u.getDataNascimento().get(Calendar.MONTH) + "/" + u.getDataNascimento().get(Calendar.YEAR);
-
+			
 			stmt = con.prepareStatement(
 					"INSERT INTO medicos (login, senha, dataNascimento, sexo, email, nome, crm, especialidade, localTrab)VALUES(?,?,?,?,?,?,?,?,?)");
 			stmt.setString(1, u.getLogin());
 			stmt.setString(2, u.getSenha());
-			stmt.setString(3, dataNasc);
+			stmt.setString(3, u.getDataNascString());
 			stmt.setString(4, u.getSexo() == 'M' ? "M" : "F");
 			stmt.setString(5, u.getEmail());
 			stmt.setString(6, u.getNome());
-			stmt.setString(7, u.getCmr());
-			stmt.setString(8, u.getEspecialidade());
-			stmt.setString(9, u.getLocalTrab());
+			stmt.setString(7, u.getCrm());
+			stmt.setString(8, u.getEspecialidadeString());
+			stmt.setString(9, u.getLocalTrabString());
 			stmt.executeUpdate();
 			return true;
 
@@ -57,18 +56,15 @@ public class MedicoDAO {
 			rs = stmt.executeQuery();
 
 			while (rs.next()) {
-				String[] datas = rs.getString("dataNascimento").split("/");
-				Calendar calendar = Calendar.getInstance();
-				calendar.set(Integer.parseInt(datas[2]), Integer.parseInt(datas[1]), Integer.parseInt(datas[0]));
-
+				
 				Medico medico = new Medico();
 				medico.setLogin(rs.getString("login"));
-				medico.setDataNascimento(calendar);
+				medico.setDataNascimento(rs.getString("dataNascimento"));
 				medico.setEmail(rs.getString("email"));
 				medico.setSenha(rs.getString("senha"));
 				medico.setSexo(rs.getString("sexo") == "M" ? 'M' : 'F');
 				medico.setNome(rs.getString("nome"));
-				medico.setCmr(rs.getString("crm"));
+				medico.setCrm(rs.getString("crm"));
 				medico.setEspecialidade(rs.getString("especialidade"));
 				medico.setLocalTrab(rs.getString("localTrab"));
 				medicos.add(medico);
@@ -94,15 +90,14 @@ public class MedicoDAO {
 			stmt = con.prepareStatement(
 					"UPDATE medicos SET senha = ?,dataNascimento = ?, sexo = ?, email = ?, nome = ?, crm = ?, especialidade = ?, localTrab = ? WHERE login = ?");
 			stmt.setString(1, u.getSenha());
-			stmt.setString(2, u.getDataNascimento().get(Calendar.DAY_OF_MONTH) + "/"
-					+ u.getDataNascimento().get(Calendar.MONTH) + "/" + u.getDataNascimento().get(Calendar.YEAR));
+			stmt.setString(2, u.getDataNascString());
 			stmt.setString(3, u.getSexo() == 'M' ? "M" : "F");
 			stmt.setString(4, u.getEmail());
 			stmt.setString(5, u.getNome());
-			stmt.setString(6, u.getLogin());
-			stmt.setString(7, u.getCmr());
-			stmt.setString(8, u.getEspecialidade());
-			stmt.setString(9, u.getLocalTrab());
+			stmt.setString(6, u.getCrm());
+			stmt.setString(7, u.getEspecialidadeString());
+			stmt.setString(8, u.getLocalTrabString());
+			stmt.setString(9, u.getLogin());
 			stmt.executeUpdate();
 
 			// JOptionPane.showMessageDialog(null, "Atualizado com sucesso!");
@@ -132,6 +127,49 @@ public class MedicoDAO {
 		} finally {
 			ConnectionFactory.closeConnection(con, stmt);
 		}
+
+	}
+	
+	public List<Medico> medicosPorEspecialidade(EspecialidadeEnum esp) {
+
+		Connection con = ConnectionFactory.getConnection();
+
+		PreparedStatement stmt = null;
+		ResultSet rs = null;
+
+		List<Medico> medicos = new ArrayList<>();
+
+		try {
+			stmt = con.prepareStatement("SELECT * FROM medicos");
+			rs = stmt.executeQuery();
+
+			while (rs.next()) {
+				
+				if(esp.toString().contentEquals(rs.getString("especialidade"))) {
+					
+					Medico medico = new Medico();
+					medico.setLogin(rs.getString("login"));
+					medico.setDataNascimento(rs.getString("dataNascimento"));
+					medico.setEmail(rs.getString("email"));
+					medico.setSenha(rs.getString("senha"));
+					medico.setSexo(rs.getString("sexo") == "M" ? 'M' : 'F');
+					medico.setNome(rs.getString("nome"));
+					medico.setCrm(rs.getString("crm"));
+					medico.setEspecialidade(rs.getString("especialidade"));
+					medico.setLocalTrab(rs.getString("localTrab"));
+					medicos.add(medico);
+					
+				}
+				
+			}
+
+		} catch (SQLException ex) {
+			ex.printStackTrace();
+		} finally {
+			ConnectionFactory.closeConnection(con, stmt, rs);
+		}
+
+		return medicos;
 
 	}
 }

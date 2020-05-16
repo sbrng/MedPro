@@ -62,7 +62,7 @@ public class UsuarioDAO {
             while (rs.next()) {
                 String[] datas = rs.getString("DataNascimento").split("/");
                 Calendar calendar = Calendar.getInstance();
-                calendar.set(Integer.parseInt(datas[3]),Integer.parseInt(datas[2]),Integer.parseInt(datas[1]));
+                calendar.set(Integer.parseInt(datas[2]),Integer.parseInt(datas[1]),Integer.parseInt(datas[0]));
 
                 Usuario produto = new Usuario();
                 produto.setLogin(rs.getString("Login"));

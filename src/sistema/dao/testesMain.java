@@ -8,7 +8,7 @@ import sistema.beans.Consulta;
 public class testesMain {
 	public static void main(String[] args) {
 
-		String text = "15:45, 16/05/2020";
+		String text = "15:45, 22/05/2020";
 
 		String[] timeData = text.split(",\\s");
 		String[] horaMin = timeData[0].split(":");
@@ -18,16 +18,28 @@ public class testesMain {
 				Integer.parseInt(horaMin[0]), Integer.parseInt(horaMin[1]));
 
 		System.out.println(timeData[1]);
-
-		Consulta con = new Consulta("78789", "98098", calendar, "H. Portugu�s", "");
-
+		Calendar temp = Calendar.getInstance();
+		Consulta con = new Consulta("med1", "98098", temp, "Hospital_Português");
+		//Consulta con = new Consulta();
+		con.setDataHora(text);
+		
 		ConsultaDAO conDAO = new ConsultaDAO();
-		// conDAO.create(con);
+		//conDAO.create(con);
 
-		List<Consulta> lista = conDAO.read();
-		System.out.println(lista.get(0));
-
+		//List<Consulta> lista = conDAO.read();
+		con.setSintomas("febre, dor de cabeça, vômito");
+		con.setId(4);
+		//conDAO.update(con);
+		for(String a : con.getSintomas()) {
+			System.out.println(a);
+		}
+		
+		conDAO.consultasPorPaciente("98098");
+		
+		System.out.println(con.getSintomasString());
+		
+		System.out.println(conDAO.consultasPorPaciente("98098"));
 		// conDAO.delete(lista.get(2));
-
+		
 	}
 }

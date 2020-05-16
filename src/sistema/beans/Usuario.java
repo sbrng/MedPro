@@ -81,4 +81,18 @@ public class Usuario implements Serializable {
     public void setLogin(String login) {
         Login = login;
     }
+    
+    public void setDataNascimento(String texto) {
+    	String[] datas = texto.split("/");
+		Calendar calendar = Calendar.getInstance();
+		calendar.set(Integer.parseInt(datas[2]), Integer.parseInt(datas[1]), Integer.parseInt(datas[0]));
+		
+		this.DataNascimento = calendar;
+    }
+    
+    public String getDataNascString() {
+    	String temp = this.getDataNascimento().get(Calendar.DAY_OF_MONTH) + "/"
+				+ this.getDataNascimento().get(Calendar.MONTH) + "/" + this.getDataNascimento().get(Calendar.YEAR);
+		return temp;
+    }
 }
