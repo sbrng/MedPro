@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #4dc2c9;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistema.controllers.ControllerTelaLogin">
+   <children>
+      <Pane layoutX="300.0" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #d5f5f7;">
+         <children>
+            <Text fill="#0a9fa4" layoutX="133.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bem vindo(a)">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Text>
+            <Text fill="#0a9fa4" layoutX="229.0" layoutY="202.0" onMouseClicked="#irParaTelaEsqueciSenha" strokeType="OUTSIDE" strokeWidth="0.0" text="Esqueci a senha" underline="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+            <JFXTextField focusColor="#2487ae" layoutX="87.0" layoutY="105.0" prefHeight="25.0" prefWidth="231.0" promptText="Email ou username" unFocusColor="#0a9fa4">
+               <font>
+                  <Font size="14.0" />
+               </font></JFXTextField>
+            <JFXPasswordField focusColor="#2487ae" layoutX="87.0" layoutY="149.0" prefHeight="25.0" prefWidth="231.0" promptText="Senha" unFocusColor="#0a9fa4">
+               <font>
+                  <Font size="14.0" />
+               </font></JFXPasswordField>
+            <JFXButton layoutX="84.0" layoutY="229.0" prefHeight="31.0" prefWidth="231.0" style="-fx-background-color: #4dc2c9;" text="Entrar" textFill="#dbf4f5">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></JFXButton>
+            <Text fill="#0a9fa4" layoutX="92.0" layoutY="453.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ainda não tem uma conta?">
+               <font>
+                  <Font size="13.0" />
+               </font></Text>
+            <Text fill="#0a9fa4" layoutX="249.0" layoutY="453.0" onMouseClicked="#irParaTelaLogon" strokeType="OUTSIDE" strokeWidth="0.0" text="Clique aqui" underline="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+            <JFXToggleButton alignment="TOP_LEFT" layoutX="72.0" layoutY="285.0" prefHeight="60.0" prefWidth="256.0" text="Lembrar minha senha" textFill="#0a9fa4">
+               <font>
+                  <Font size="14.0" />
+               </font></JFXToggleButton>
+            <JFXToggleButton alignment="TOP_LEFT" layoutX="72.0" layoutY="343.0" prefHeight="60.0" prefWidth="256.0" text="Mantenha-me conectado(a)" textFill="#0a9fa4">
+               <font>
+                  <Font size="14.0" />
+               </font></JFXToggleButton>
+         </children>
+      </Pane>
+      <Text fill="#dbf4f5" layoutX="99.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MedPro">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

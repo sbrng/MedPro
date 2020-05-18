@@ -7,43 +7,40 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import application.*;
 
-public class ControllerFS {
-
-	@FXML
-	private Button botaoLogIn;
+public class ControllerTelaLogon {
 
 	@FXML
-	private Button botaoLogOn;
-
-	@FXML
-	void goToLogIn(ActionEvent event) {
+    void irParaTelaLogon2(ActionEvent event) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("/fxmls/LogInScene.fxml"));
-			Scene start = new Scene(root, 800, 600);
+			Parent root = FXMLLoader.load(getClass().getResource("/fxmls/TelaLogon2.fxml"));
+			Scene start = new Scene(root, 700, 500);
 			Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-			window.setTitle("LogIn Screen");
 			window.setScene(start);
+			window.setTitle("MedPro");
 			window.show();
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
-	}
+    }
 
 	@FXML
-	void goToLogOn(ActionEvent event) {
+	void voltar(ActionEvent event) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("/fxmls/LogOnScene.fxml"));
-			Scene start = new Scene(root, 800, 600);
+			Parent root = FXMLLoader.load(getClass().getResource("/fxmls/TelaLogin.fxml"));
+			Scene start = new Scene(root, 700, 500);
 			Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-			window.setTitle("LogOn Screen");
 			window.setScene(start);
+			window.setTitle("MedPro");
 			window.show();
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
+
 	}
 
 }

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #4dc2c9;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistema.controllers.ControllerTelaEsqueceuSenha">
+   <children>
+      <Pane layoutX="300.0" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #d5f5f7;">
+         <children>
+            <Text fill="#0a9fa4" layoutX="89.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Esqueceu sua senha?">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <Text fill="#0a9fa4" layoutX="111.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vamos mandar um email para você redefini-la" textAlignment="CENTER" wrappingWidth="177.29736328125">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <JFXButton layoutX="236.0" layoutY="296.0" prefHeight="30.0" prefWidth="78.0" style="-fx-background-color: #4dc2c9;" text="Enviar" textFill="#dbf4f5">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField focusColor="#2487ae" layoutX="85.0" layoutY="255.0" prefHeight="25.0" prefWidth="231.0" promptText="Digite seu email" unFocusColor="#0a9fa4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton layoutX="46.0" layoutY="431.0" onAction="#voltar" prefHeight="30.0" prefWidth="78.0" style="-fx-background-color: #4dc2c9;" text="Voltar" textFill="#dbf4f5">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <Text fill="#dbf4f5" layoutX="103.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MedPro">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

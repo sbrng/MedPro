@@ -34,11 +34,11 @@ public class testesMain {
 			System.out.println(a);
 		}
 		
-		conDAO.consultasPorPaciente("98098");
+		//conDAO.consultasPorPaciente("98098");
 		
 		System.out.println(con.getSintomasString());
 		
-		System.out.println(conDAO.consultasPorPaciente("98098"));
+		//System.out.println(conDAO.consultasPorPaciente("98098"));
 		// conDAO.delete(lista.get(2));
 		
 	}

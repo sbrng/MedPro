@@ -11,10 +11,10 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("/fxmls/FirstScene.fxml"));
-			Scene start = new Scene(root, 800, 600);
+			Parent root = FXMLLoader.load(getClass().getResource("/fxmls/TelaLogin.fxml"));
+			Scene start = new Scene(root, 700, 500);
 			primaryStage.setScene(start);
-			primaryStage.setTitle("AlphaTest");
+			primaryStage.setTitle("MedPro");
 			primaryStage.show();
 		} catch (Exception e) {
 			e.printStackTrace();

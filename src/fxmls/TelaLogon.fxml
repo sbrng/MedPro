@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #4dc2c9;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistema.controllers.ControllerTelaLogon">
+   <children>
+      <Pane layoutX="300.0" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #d5f5f7;">
+         <children>
+            <Text fill="#0a9fa4" layoutX="133.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Crie sua conta">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Text>
+            <JFXTextField focusColor="#2487ae" layoutX="89.0" layoutY="158.0" prefHeight="25.0" prefWidth="231.0" promptText="Email " unFocusColor="#0a9fa4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField focusColor="#2487ae" layoutX="89.0" layoutY="193.0" prefHeight="25.0" prefWidth="231.0" promptText="Nome de usuário" unFocusColor="#0a9fa4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXButton layoutX="43.0" layoutY="442.0" onAction="#voltar" prefHeight="30.0" prefWidth="78.0" style="-fx-background-color: #4dc2c9;" text="Voltar" textFill="#dbf4f5">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField focusColor="#2487ae" layoutX="89.0" layoutY="228.0" prefHeight="25.0" prefWidth="231.0" promptText="Senha" unFocusColor="#0a9fa4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField focusColor="#2487ae" layoutX="89.0" layoutY="263.0" prefHeight="25.0" prefWidth="231.0" promptText="Confirmar senha" unFocusColor="#0a9fa4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXTextField focusColor="#2487ae" layoutX="89.0" layoutY="123.0" prefHeight="25.0" prefWidth="231.0" promptText="Nome completo" unFocusColor="#0a9fa4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXDatePicker defaultColor="#4dc2c9" layoutX="89.0" layoutY="301.0" prefHeight="30.0" prefWidth="231.0" promptText="Data de nascimento">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXDatePicker>
+            <JFXRadioButton layoutX="89.0" layoutY="357.0" text="Homem" textFill="#0a9fa4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton layoutX="248.0" layoutY="357.0" text="Mulher" textFill="#0a9fa4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXButton layoutX="278.0" layoutY="442.0" onAction="#irParaTelaLogon2" prefHeight="30.0" prefWidth="78.0" style="-fx-background-color: #4dc2c9;" text="Próximo" textFill="#dbf4f5">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <Text fill="#dbf4f5" layoutX="99.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MedPro">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
