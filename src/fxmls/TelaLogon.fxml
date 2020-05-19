@@ -6,6 +6,7 @@
 <?import com.jfoenix.controls.JFXRadioButton?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
@@ -20,12 +21,12 @@
                   <Font size="23.0" />
                </font>
             </Text>
-            <JFXTextField focusColor="#2487ae" layoutX="89.0" layoutY="158.0" prefHeight="25.0" prefWidth="231.0" promptText="Email " unFocusColor="#0a9fa4">
+            <JFXTextField fx:id="email" focusColor="#2487ae" layoutX="89.0" layoutY="158.0" prefHeight="25.0" prefWidth="231.0" promptText="Email " unFocusColor="#0a9fa4">
                <font>
                   <Font size="14.0" />
                </font>
             </JFXTextField>
-            <JFXPasswordField focusColor="#2487ae" layoutX="89.0" layoutY="193.0" prefHeight="25.0" prefWidth="231.0" promptText="Nome de usuário" unFocusColor="#0a9fa4">
+            <JFXPasswordField fx:id="senha" focusColor="#2487ae" layoutX="89.0" layoutY="228.0" prefHeight="25.0" prefWidth="231.0" promptText="Senha" unFocusColor="#0a9fa4">
                <font>
                   <Font size="14.0" />
                </font>
@@ -35,32 +36,35 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </JFXButton>
-            <JFXTextField focusColor="#2487ae" layoutX="89.0" layoutY="228.0" prefHeight="25.0" prefWidth="231.0" promptText="Senha" unFocusColor="#0a9fa4">
+            <JFXTextField fx:id="login" focusColor="#2487ae" layoutX="89.0" layoutY="193.0" prefHeight="25.0" prefWidth="231.0" promptText="Nome de usuário" unFocusColor="#0a9fa4">
                <font>
                   <Font size="14.0" />
                </font>
             </JFXTextField>
-            <JFXPasswordField focusColor="#2487ae" layoutX="89.0" layoutY="263.0" prefHeight="25.0" prefWidth="231.0" promptText="Confirmar senha" unFocusColor="#0a9fa4">
+            <JFXPasswordField fx:id="confSenha" focusColor="#2487ae" layoutX="89.0" layoutY="263.0" prefHeight="25.0" prefWidth="231.0" promptText="Confirmar senha" unFocusColor="#0a9fa4">
                <font>
                   <Font size="14.0" />
                </font>
             </JFXPasswordField>
-            <JFXTextField focusColor="#2487ae" layoutX="89.0" layoutY="123.0" prefHeight="25.0" prefWidth="231.0" promptText="Nome completo" unFocusColor="#0a9fa4">
+            <JFXTextField fx:id="nome" focusColor="#2487ae" layoutX="89.0" layoutY="123.0" prefHeight="25.0" prefWidth="231.0" promptText="Nome completo" unFocusColor="#0a9fa4">
                <font>
                   <Font size="14.0" />
                </font>
             </JFXTextField>
-            <JFXDatePicker defaultColor="#4dc2c9" layoutX="89.0" layoutY="301.0" prefHeight="30.0" prefWidth="231.0" promptText="Data de nascimento">
+            <JFXDatePicker fx:id="dataNascimento" defaultColor="#4dc2c9" layoutX="89.0" layoutY="301.0" prefHeight="30.0" prefWidth="231.0" promptText="Data de nascimento">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXDatePicker>
-            <JFXRadioButton layoutX="89.0" layoutY="357.0" text="Homem" textFill="#0a9fa4">
+            <JFXRadioButton fx:id="homem" layoutX="89.0" layoutY="357.0" text="Homem" textFill="#0a9fa4">
                <font>
                   <Font size="14.0" />
                </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="sexo" />
+               </toggleGroup>
             </JFXRadioButton>
-            <JFXRadioButton layoutX="248.0" layoutY="357.0" text="Mulher" textFill="#0a9fa4">
+            <JFXRadioButton fx:id="mulher" layoutX="248.0" layoutY="357.0" selected="true" text="Mulher" textFill="#0a9fa4" toggleGroup="$sexo">
                <font>
                   <Font size="14.0" />
                </font>

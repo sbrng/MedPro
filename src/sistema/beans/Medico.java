@@ -13,9 +13,17 @@ public class Medico extends Usuario {
 		this.localTrab = localTrab;
 	}
 
-	public Medico(String nome, String login, String senha, Calendar dataNascimento, char sexo, String email, String crm,
-			EspecialidadeEnum especialidade, LocalTrabEnum localTrab) {
+	public Medico(String nome, String login, String senha, Calendar dataNascimento, String email, char sexo) {
+		super(nome, login, senha, dataNascimento, email, sexo);
+	}
+
+	public Medico(String nome, String login, String senha, String dataNascimento, char sexo, String email) {
 		super(nome, login, senha, dataNascimento, sexo, email);
+	}
+	
+	public Medico(String nome, String login, String senha, Calendar dataNascimento, String email, char sexo, String crm,
+			EspecialidadeEnum especialidade, LocalTrabEnum localTrab) {
+		super(nome, login, senha, dataNascimento, email, sexo);
 		this.crm = crm;
 		this.especialidade = especialidade;
 		this.localTrab = localTrab;
@@ -64,4 +72,11 @@ public class Medico extends Usuario {
 	public String getEspecialidadeString() {
 		return especialidade.toString();
 	}
+
+	@Override
+	public String toString() {
+		return "Medico [crm=" + crm + ", especialidade=" + especialidade + ", localTrab=" + localTrab + "]";
+	}
+	
+	
 }

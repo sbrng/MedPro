@@ -41,16 +41,26 @@ public class Usuario implements Serializable {
         this.email = email;
     }
 
-    public Usuario(String nome, String login, String senha, Calendar dataNascimento, char sexo, String email) {
+    
+    public Usuario(String nome, String login, String senha, Calendar dataNascimento, String email, char sexo) {
+		Nome = nome;
+		Login = login;
+		Senha = senha;
+		DataNascimento = dataNascimento;
+		this.email = email;
+		this.sexo = sexo;
+	}
+
+    public Usuario(String nome, String login, String senha, String dataNascimento, char sexo, String email) {
         Nome = nome;
         Login = login;
         Senha = senha;
-        DataNascimento = dataNascimento;
+        setDataNascimento(dataNascimento);
         this.sexo = sexo;
         this.email = email;
     }
 
-    public String getNome() {
+	public String getNome() {
         return Nome;
     }
 
@@ -95,4 +105,13 @@ public class Usuario implements Serializable {
 				+ this.getDataNascimento().get(Calendar.MONTH) + "/" + this.getDataNascimento().get(Calendar.YEAR);
 		return temp;
     }
+
+	@Override
+	public String toString() {
+		return "Usuario [Nome=" + Nome + ", Login=" + Login + ", Senha=" + Senha + ", DataNascimento=" + this.getDataNascString()
+				+ ", email=" + email + ", sexo=" + sexo + "]";
+	}
+    
+    
+    
 }

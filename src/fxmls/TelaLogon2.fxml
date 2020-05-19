@@ -18,25 +18,25 @@
                   <Font size="23.0" />
                </font>
             </Text>
-            <JFXButton layoutX="43.0" layoutY="442.0" onAction="#voltar" prefHeight="25.0" prefWidth="71.0" style="-fx-background-color: #4dc2c9;" text="Voltar" textFill="#dbf4f5">
+            <JFXButton fx:id="voltar" layoutX="43.0" layoutY="442.0" onAction="#voltar" prefHeight="25.0" prefWidth="71.0" style="-fx-background-color: #4dc2c9;" text="Voltar" textFill="#dbf4f5">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </JFXButton>
-            <JFXTextField focusColor="#2487ae" layoutX="89.0" layoutY="277.0" prefHeight="25.0" prefWidth="231.0" promptText="CMR" unFocusColor="#0a9fa4">
+            <JFXTextField id="crmBox" fx:id="CRMbox" focusColor="#2487ae" layoutX="89.0" layoutY="277.0" prefHeight="25.0" prefWidth="231.0" promptText="CRM" unFocusColor="#0a9fa4">
                <font>
                   <Font size="14.0" />
                </font>
             </JFXTextField>
-            <JFXComboBox focusColor="#2487ae" layoutX="89.0" layoutY="315.0" prefHeight="30.0" prefWidth="231.0" promptText="Local de trabalho" unFocusColor="#0a9fa4" />
-            <JFXComboBox focusColor="#2487ae" layoutX="89.0" layoutY="355.0" prefHeight="30.0" prefWidth="231.0" promptText="Especialidade" unFocusColor="#0a9fa4" />
+            <JFXComboBox fx:id="cbLocal" focusColor="#2487ae" layoutX="89.0" layoutY="315.0" prefHeight="30.0" prefWidth="231.0" promptText="Local de trabalho" unFocusColor="#0a9fa4" />
+            <JFXComboBox fx:id="cbEspecialidade" focusColor="#2487ae" layoutX="89.0" layoutY="355.0" prefHeight="30.0" prefWidth="231.0" promptText="Especialidade" unFocusColor="#0a9fa4" />
             <Circle fill="#4dc2c9" layoutX="205.0" layoutY="156.0" radius="51.0" stroke="#4dc2c9" strokeType="INSIDE" />
             <JFXButton layoutX="133.0" layoutY="235.0" prefHeight="24.0" prefWidth="144.0" style="-fx-background-color: #4dc2c9;" text="Escolha uma foto" textFill="#f5f5f5">
                <font>
                   <Font size="14.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="288.0" layoutY="442.0" prefHeight="30.0" prefWidth="78.0" style="-fx-background-color: #4dc2c9;" text="Próximo" textFill="#dbf4f5">
+            <JFXButton fx:id="proximo" layoutX="288.0" layoutY="442.0" onAction="#proximo" prefHeight="30.0" prefWidth="78.0" style="-fx-background-color: #4dc2c9;" text="Próximo" textFill="#dbf4f5">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
