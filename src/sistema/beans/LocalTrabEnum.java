@@ -1,5 +1,8 @@
 package sistema.beans;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public enum LocalTrabEnum {
 	Hospital_Santa_Helena, 
 	Hospital_Português,
@@ -25,4 +28,30 @@ public enum LocalTrabEnum {
 	Hospital_São_Lucas,
 	OUTRO;
 	
+	private Map<String, String> map = new HashMap<String, String>();
+
+	public Map<String, String> getMap() {
+		return map;
+	}
+	
+	public void setMap() {
+		
+		for(LocalTrabEnum a : LocalTrabEnum.values()) {
+			
+			String value = a.toString();
+			
+			String[] partes = value.split("_");
+			
+			String key = "";
+			
+			for(int i = 0; i<partes.length; i++) {
+				if(i == partes.length-1) {
+					key = key + partes[i];
+				}else {
+					key = key + partes[i] + " ";
+				}
+			}
+			this.map.put(key, value);
+		}
+	}
 }
